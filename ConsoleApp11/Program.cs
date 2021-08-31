@@ -16,7 +16,8 @@ namespace ConsoleApp11
         {
         DocumentWorker doc = null;
         UserType type = UserType.NotSet;
-        System.Console.Write("If you want to use Free version, press 1;\nIf you want to use Pro or Expert version, enter your license code:");
+        System.Console.Write("If you want to use Free version, press 1;\nIf you want to use Pro or Expert version, enter your license code;");
+        System.Console.WriteLine();
         var choice = Console.ReadLine();
         switch (choice)
         {
@@ -60,12 +61,12 @@ namespace ConsoleApp11
 
     public virtual void EditDocument()
     {
-        System.Console.WriteLine("Document editing is availavle in Pro version");
+        System.Console.WriteLine("Document editing is available in Pro version");
     }
 
     public virtual void SaveDocument()
     {
-        System.Console.WriteLine("Document saving is availavle in Pro version");
+        System.Console.WriteLine("Document saving is available in Pro version");
     }
 
     }
@@ -75,13 +76,11 @@ namespace ConsoleApp11
     public override void EditDocument()
     {
     System.Console.WriteLine("Document Edited");
-    base.EditDocument();
     }
 
     public override void SaveDocument()
     {
     System.Console.WriteLine("Document saved in old format, saving in other formats is available in Expert version");
-    base.SaveDocument();
     }
     }
 
@@ -90,7 +89,6 @@ namespace ConsoleApp11
     public override void SaveDocument()
     {
     System.Console.WriteLine("Document saved in a new format");
-    base.SaveDocument();
     }
     }
 }
